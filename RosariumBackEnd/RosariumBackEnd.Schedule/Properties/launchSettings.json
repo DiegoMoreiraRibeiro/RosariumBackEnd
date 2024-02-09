@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RosariumBackEnd.Schedule": {
+      "commandName": "Project",
+      "commandLineArgs": "\"{'application':'liturgia_diaria'}\""
+    }
+  }
+}
