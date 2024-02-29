@@ -21,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{F0EAE4E0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RosariumBackEnd.Infra", "RosariumBackEnd.Infra\RosariumBackEnd.Infra.csproj", "{D13CDE4F-81E4-4880-A1F7-6FD208C0806E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{C3DE72E0-98E6-4ECC-93AC-3FCC71FB1E0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RosariumBackEnd.Test", "RosariumBackEnd.Test\RosariumBackEnd.Test.csproj", "{C24A4562-8461-4C40-8639-E455E4D508F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +51,10 @@ Global
 		{D13CDE4F-81E4-4880-A1F7-6FD208C0806E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D13CDE4F-81E4-4880-A1F7-6FD208C0806E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D13CDE4F-81E4-4880-A1F7-6FD208C0806E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C24A4562-8461-4C40-8639-E455E4D508F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C24A4562-8461-4C40-8639-E455E4D508F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C24A4562-8461-4C40-8639-E455E4D508F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C24A4562-8461-4C40-8639-E455E4D508F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +65,7 @@ Global
 		{5C3DDC13-B5B0-4941-A22B-98057C223AD2} = {E08D32E6-5D90-4275-9D4F-95C704156F54}
 		{C1561192-F639-4FE2-B144-DFD95354DB75} = {61ED0DAB-0277-4EE8-BBB4-E220E8090542}
 		{D13CDE4F-81E4-4880-A1F7-6FD208C0806E} = {F0EAE4E0-67F3-4453-BD2D-222877BA52A5}
+		{C24A4562-8461-4C40-8639-E455E4D508F5} = {C3DE72E0-98E6-4ECC-93AC-3FCC71FB1E0C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {39F9C01B-E488-4AA5-9A8C-471078CFC69C}

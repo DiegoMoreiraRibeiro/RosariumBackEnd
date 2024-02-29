@@ -19,24 +19,43 @@ namespace RosariumBackEnd.Infra.IoC
             return services.BuildServiceProvider();
         }
 
+        public static ServiceProvider InitIOC_Api(IServiceCollection services, string connectionStrig)
+        {
+            InitDB(services, connectionStrig);
+            InitUtils(services);
+            InitCore(services);
+            return services.BuildServiceProvider();
+        }
 
-        public static void InitDB(ServiceCollection services, string connectionStrig)
+
+        public static void InitDB(IServiceCollection services, string connectionStrig)
         {
             services.AddDbContext<MyApplicationDbContext>(options =>
                 options.UseSqlServer(connectionStrig));
 
         }
 
-        public static void InitUtils(ServiceCollection services)
+        public static void InitUtils(IServiceCollection services)
         {
             services.AddScoped<ObjectMapper>();
             services.AddHttpClient();
         }
 
-        public static void InitCore<T>(ServiceCollection services) where T : class
+        public static void InitCore<T>(IServiceCollection services) where T : class
         {
             services.AddScoped<T>();
 
+            services.AddScoped<ICustomHttpUtils, CustomHttpUtils>();
+
+            services.AddScoped<IEvangelhoRepository, EvangelhoRepository>();
+            services.AddScoped<IEvangelhoService, EvangelhoService>();
+
+            services.AddScoped<ILiturgiaService, LiturgiaService>();
+            services.AddScoped<ILiturgiaRepository, LiturgiaRepository>();
+        }
+
+        public static void InitCore(IServiceCollection services)
+        {
             services.AddScoped<ICustomHttpUtils, CustomHttpUtils>();
 
             services.AddScoped<IEvangelhoRepository, EvangelhoRepository>();

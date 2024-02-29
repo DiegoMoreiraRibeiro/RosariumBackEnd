@@ -26,8 +26,6 @@ try
             await liturgiaDiariaService.InitLiturgiaDiariaAsync();
             Console.WriteLine($"Concluído com sucesso!");
             break;
-
-
         default:
             Console.WriteLine("Nenhuma opção foi passada");
             break;

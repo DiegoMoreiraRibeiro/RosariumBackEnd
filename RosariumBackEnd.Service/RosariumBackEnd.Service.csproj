@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RosariumBackEnd.Api\RosariumBackEnd.Api.csproj" />
     <ProjectReference Include="..\RosariumBackEnd.Entities\RosariumBackEnd.Domain.csproj" />
   </ItemGroup>
 

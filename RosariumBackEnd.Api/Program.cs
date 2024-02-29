@@ -1,15 +1,21 @@
+using Microsoft.IdentityModel.Tokens;
+using RosariumBackEnd.Infra.IoC;
+
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddEndpointsApiExplorer();
+
+IConfigurationRoot config = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .AddEnvironmentVariables()
+    .Build();
+
+var connectionStrings = config.GetConnectionString("dbapi").IsNullOrEmpty() ? "" : config.GetConnectionString("dbapi")!.ToString();
+InitIOC.InitIOC_Api(builder.Services, connectionStrings);
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
