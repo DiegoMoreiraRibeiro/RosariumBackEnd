@@ -4,6 +4,7 @@ namespace RosariumBackEnd.Entities.Entities
 {
     public class MyApplicationDbContext : DbContext
     {
+
         public MyApplicationDbContext(DbContextOptions<MyApplicationDbContext> options) : base(options)
         {
         }
